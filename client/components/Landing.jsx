@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const Landing = () => {
+const Landing = ({name, setName, day, setDay}) => {
 
 
 
@@ -9,6 +9,11 @@ const Landing = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         e.target.reset()
+    }
+
+    // Handles updating state with input values 
+    const handleUpdate = (e) => {
+
     }
 
     return(
