@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 // Components
 import Landing from './Landing'
+import Main from './Main'
 
 
 function App () {
