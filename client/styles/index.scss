@@ -10,7 +10,12 @@ body{
 
 // Landing
 .landing-container{
-
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
 }
 
 .landing-header{
@@ -18,10 +23,10 @@ body{
 }
 
 .landing-form-container{
-
+ 
 }
 
 .landing-btn{
-    
+
 }
 // Landing
