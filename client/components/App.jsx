@@ -9,14 +9,14 @@ function App () {
 
   // State used to track input on landing / Display on main
   const [name, setName] = useState('')
-  const [day, setDay] = useState('')
+
 
   // State used to conditionally render Landing / Main Components
   const [view, setView] = useState(true)
 
   // Compressing components into variables used to conditionally render below
-  const landing  = <Landing setName={setName} setDay={setDay} setView={setView}/>
-  const main = <Main name={name} day={day}/>
+  const landing  = <Landing setName={setName} setView={setView}/>
+  const main = <Main name={name}/>
 
   return (
     <>
