@@ -1,5 +1,7 @@
 import React from 'react';
 
+// TODO:
+// User can't complete submit if input is empty
 
 const Landing = ({setName,setDay,setView}) => {
 
