@@ -1,11 +1,12 @@
 import React from 'react';
 
 
-const Main = () => {
+const Main = ({name, day}) => {
 
     return (
-        <div>
-
+        <div className='main-container'>
+            <h1>{name}'s</h1> 
+            <h1>{day}</h1>
         </div>
     )
 }

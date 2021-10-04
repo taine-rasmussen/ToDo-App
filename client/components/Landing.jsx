@@ -1,12 +1,13 @@
 import React from 'react';
 
 
-const Landing = ({name, setName, day, setDay}) => {
+const Landing = ({name, setName, day, setDay, setView}) => {
 
     // Handle form submitting
     const handleSubmit = (e) => {
         e.preventDefault();
         e.target.reset()
+        setView(false)
     }
 
     // Handles updating name State with input value 
@@ -20,7 +21,7 @@ const Landing = ({name, setName, day, setDay}) => {
     }
 
     return(
-        <div clasName="landing-container">
+        <div className="landing-container">
             <h1 className="landing-header">Welcome, lets organise your day!</h1>
 
             <form className="landing-form-container" onSubmit={handleSubmit}>
