@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const Landing = ({name, setName, day, setDay, setView}) => {
+const Landing = ({setName,setDay,setView}) => {
 
     // Handle form submitting
     const handleSubmit = (e) => {
