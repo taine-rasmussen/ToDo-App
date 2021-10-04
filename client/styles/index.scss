@@ -81,13 +81,38 @@ input{
 
 .main-header-container{
     margin-left: 3rem;
+    margin-top: -1.5rem;
 }
 
 .main-list-container{
-
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
 }
 // Main
 // List
+.list-container{
+    margin-top: -6rem ;
+    border: 5px solid #77A6F7;
+    background-color: #77A6F7;
+    border-radius: 3px;
+    width: 60vw;
+    height: 75vh;
+
+}
+
+.list-check-container{
+
+}
+
+.list-text-container{
+
+}
+// List
+
 
 
 

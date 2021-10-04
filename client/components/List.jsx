@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 
 const List = () => {
 
+    const [todo, setTodo] = useState([['Smile']])
+
     return(
-        <div>
-            <h2>List working</h2>
+        <div className="list-container">
+            <div className="list-check-container"></div>
+                <div className="list-text-container">
+                    {todo.forEach(item => {
+                       return <h1>{item}</h1>
+                    })}
+                </div>
         </div>
     )
 }
