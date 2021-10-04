@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 // Components
 import Landing from './Landing'
@@ -6,10 +6,14 @@ import Landing from './Landing'
 
 function App () {
 
+  // State used to track input on landing / Display on main
+  const [name, setName] = useState('')
+  const [day, setDay] = useState('')
+
   return (
     <>
       <div className='app'>
-          <Landing />
+          <Landing name={name} setName={setName} day={day} setDay={setDay}/>
       </div>
     </>
   )
