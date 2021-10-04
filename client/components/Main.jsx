@@ -5,8 +5,7 @@ const Main = ({name, day}) => {
 
     return (
         <div className='main-container'>
-            <h1>{name}'s</h1> 
-            <h1>{day}</h1>
+            <h1>Welcome to a new day {name}</h1> 
         </div>
     )
 }
