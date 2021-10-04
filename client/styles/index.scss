@@ -31,8 +31,17 @@ input{
 
 ::placeholder {
     color: #008878;
-    opacity: 1; /* Firefox */
   }
+
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #008878;
+
+   }
+   
+   ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #008878;
+
+   }
 
 
 // Landing
