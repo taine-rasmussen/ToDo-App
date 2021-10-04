@@ -20,7 +20,7 @@ const Landing = ({setName,setDay,setView}) => {
             <h1 className="landing-header">Welcome, lets organise your day!</h1>
             <form className="landing-form-container" onSubmit={handleSubmit}>
                 <input type='text' placeholder="Enter Name..." className="landing-input" onChange={handleNameUpdate}></input>
-                <button className="landing-btn">Get started!</button>
+                <button className="landing-btn">Start your day!</button>
             </form>
         </div>
     )

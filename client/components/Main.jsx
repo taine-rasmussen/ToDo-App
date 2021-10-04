@@ -1,7 +1,10 @@
 import React from 'react';
 
 
-const Main = ({name, day}) => {
+
+// Use setInterval to show welcome message on load then use state to flip header message after n time
+
+const Main = ({name}) => {
 
     return (
         <div className='main-container'>
