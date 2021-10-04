@@ -24,7 +24,7 @@ const Main = ({name}) => {
         // Starts timer on page load
         useEffect(() => {
         timer
-        });
+        }, []);
 
     return (
         <div className='main-container'>

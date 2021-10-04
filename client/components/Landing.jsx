@@ -7,16 +7,15 @@ const Landing = ({setName, name, setView}) => {
 
 
     // Used to flip header if user submits without name
-    const [header, setHeader] = useState(true)
+    const [subHeader, setSubHeader] = useState(false)
 
-    // Headers used to on load and after timer
-    const secondHeader = <h1>Welcome, lets organise your day!</h1>
-    const firstHeader = <h1>Please enter a name before submiting</h1>
+    // Updates subHeader state to show message below input
+    const updateSubHeader = () => {
+        setSubHeader(true)
+    }
 
-        // Sets header state to true changing the header displayed
-        const changeHeader = () => {
-            setHeader(false)
-        }
+    // Message to be displayed if form submited without name
+    const subHeaderMessage = <h3>Please enter a name before submitting</h3>
 
     // Handle form submitting
     const handleSubmit = (e) => {
@@ -30,7 +29,7 @@ const Landing = ({setName, name, setView}) => {
         if (name.length > 0){
             handleSubmit(e)
         } else {
-            changeHeader()
+            updateSubHeader()
         }
     }
 
@@ -41,11 +40,12 @@ const Landing = ({setName, name, setView}) => {
 
     return(
         <div className="landing-container">
-            {header ? secondHeader : firstHeader }
+            <h1>Welcome, lets organise your day!</h1>
             <form className="landing-form-container" onSubmit={checksInputOnSubmit}>
                 <input type='text' placeholder="Enter Name..." className="landing-input" onChange={handleNameUpdate}></input>
                 <button className="landing-btn">Start your day!</button>
             </form>
+           {subHeader ? subHeaderMessage : null}
         </div>
     )
 }
