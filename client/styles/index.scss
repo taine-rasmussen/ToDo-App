@@ -20,6 +20,20 @@ h1{
     color: #008878;
 }
 
+input{
+    border: 3px solid #77a6f7;
+    border-radius: 3px;
+    padding: 15px;
+    background-color: #77a6f7;
+    color: #008878;
+    font-size: 1.2rem;
+}
+
+::placeholder {
+    color: #008878;
+    opacity: 1; /* Firefox */
+  }
+
 
 // Landing
 .landing-container{
