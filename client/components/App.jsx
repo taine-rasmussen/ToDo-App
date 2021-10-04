@@ -15,7 +15,7 @@ function App () {
   const [view, setView] = useState(true)
 
   // Compressing components into variables used to conditionally render below
-  const landing  = <Landing setName={setName} setView={setView}/>
+  const landing  = <Landing setName={setName} name={name} setView={setView}/>
   const main = <Main name={name}/>
 
   return (

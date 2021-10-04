@@ -1,23 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Raleway:ital,wght@0,100;1,600&family=Rock+Salt&display=swap');
+
+
 body{
     margin: 0;
     background-color: #D3E3FC;
 }
 
-// Colour pallete 
-// #00887A - Green
-// #FFCCBC - Pale pink
-// #FFFFFF - White
-// #D3E3FC - bluey grey
-// #77A6F7 - Darker blue
 
 .app{
     max-width: 100vw;
     min-height: 100vh;
 }
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
 
 h1{
     font-size: 5rem;
     color: #008878;
+    font-family: 'Bebas Neue', cursive;
+    text-shadow: #FFCCBC 2px 2px;
+
 }
 
 input{
@@ -25,14 +31,21 @@ input{
     border-radius: 3px;
     padding: 15px;
     background-color: #77a6f7;
-    color: #008878;
+    color: #D3E3FC;
     font-size: 1.2rem;
 }
 
 ::placeholder {
-    color: #008878;
-    opacity: 1; /* Firefox */
+    color: #D3E3FC;
   }
+
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #D3E3FC;
+   }
+   
+   ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #D3E3FC;
+   }
 
 
 // Landing
@@ -57,7 +70,22 @@ input{
     margin: 2px;
 }
 .landing-btn{
-    margin: 2px;
+    margin: 8px;
+    border: 3px solid #77A6F7;
+    border-radius: 3px;
+    background-color: #77A6F7;
+    color: #D3E3FC;
+    padding: 15px;
+    font-size: 1.2rem;
+}
 
+.landing-btn:hover{
+    box-shadow: #FFCCBC 0px 2px 20px;
 }
 // Landing
+// Colour pallete 
+// #00887A - Green
+// #FFCCBC - Pale pink
+// #FFFFFF - White
+// #D3E3FC - bluey grey
+// #77A6F7 - Darker blue
