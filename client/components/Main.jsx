@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-
+// Components
+import List from './List'
 
 // Use setInterval to show welcome message on load then use state to flip header message after n time
 
@@ -28,7 +29,10 @@ const Main = ({name}) => {
 
     return (
         <div className='main-container'>
-            {header ? secondHeader : firstHeader }
+            <div className='main-header-container'>{header ? secondHeader : firstHeader }</div>
+                <div className='main-list-container'>
+                    <List />
+                </div>
         </div>
     )
 }
