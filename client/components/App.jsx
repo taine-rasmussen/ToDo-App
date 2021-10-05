@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Route } from 'react-router-dom'
 
 // Components
 import Landing from './Landing'
@@ -10,18 +11,11 @@ function App () {
   // State used to track input on landing / Display on main
   const [name, setName] = useState('')
 
-
-  // State used to conditionally render Landing / Main Components
-  const [view, setView] = useState(true)
-
-  // Compressing components into variables used to conditionally render below
-  const landing  = <Landing setName={setName} name={name} setView={setView}/>
-  const main = <Main name={name}/>
-
   return (
     <>
       <div className='app'>
-        {view ? landing : main}  
+        <Route exact path='/' component={Landing} setName={setName} name={name}/>
+        <Route exact path='/list' component={Main } name={name}/>
       </div>
     </>
   )
