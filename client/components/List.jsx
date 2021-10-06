@@ -45,8 +45,8 @@ const List = () => {
                                     <div className='task-item-container'>
                                         <input type='checkbox' className='checkbox'></input>
                                         <h2>{item}</h2>
-                                        <button className='task-btn wider'>Edit</button>
-                                        <button className='task-btn'>Delete</button>
+                                        <button className='edit'>Edit</button>
+                                        <button className='del-btn'>Delete</button>
                                     </div>
                               })}
                     </div>

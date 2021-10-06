@@ -134,18 +134,29 @@ h2{
     align-items: center;
 }
 
-.task-btn{
-    margin: 8px;
+.del-btn{
+    padding: 0px 15px 0px 15px;
+    margin: 0px 5px 0px 15px;
+    height: 27.5px;
     border: 3px solid #D3E3FC;
     border-radius: 3px;
     background-color: #77A6F7;
     color: #D3E3FC;
     padding: 5px;
-    font-size: 1rem;
+    font-size: 0.7rem;
 }
 
-.wider{
+.edit{
     padding: 0px 15px 0px 15px;
+    margin: 0px 5px 0px 15px;
+    height: 27.5px;
+    border: 3px solid #D3E3FC;
+    border-radius: 3px;
+    background-color: #77A6F7;
+    color: #D3E3FC;
+    padding: 5px;
+    font-size: 0.7rem;
+
 }
 
 .checkbox{
@@ -155,6 +166,7 @@ h2{
 	border-radius: 3px;
     width: 15px;
     height:15px;
+    margin: 0px 15px 0px 15px;
 
 
 
