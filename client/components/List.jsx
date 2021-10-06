@@ -38,12 +38,12 @@ const List = () => {
                 </input>
                 <button type='submit' className='list-btn'>Add to list</button>
             </form>
-                <div className="task-list-container"></div>
+                <div className="task-container"></div>
                     <div className="list-text-container">
                     {task.map(item => {
                         return item.length < 1 ? null : 
                                     <div className='task-item-container'>
-                                        <input type='checkbox' className='task-check'></input>
+                                        <input type='checkbox' className='checkbox'></input>
                                         <h2>{item}</h2>
                                         <button className='task-btn wider'>Edit</button>
                                         <button className='task-btn'>Delete</button>
