@@ -31,15 +31,6 @@ h2{
     font-family: 'Bebas Neue', cursive;
 }
 
-input{
-    border: 3px solid #77a6f7;
-    border-radius: 3px;
-    padding: 15px;
-    background-color: #77a6f7;
-    color: #D3E3FC;
-    font-size: 1.2rem;
-}
-
 ::placeholder {
     color: #D3E3FC;
   }
@@ -119,6 +110,12 @@ input{
 
 .form-input{
     margin-right: -2rem;
+    border: 3px solid #77a6f7;
+    border-radius: 3px;
+    padding: 15px;
+    background-color: #77a6f7;
+    color: #D3E3FC;
+    font-size: 1.2rem;
 }
 
 .task-item-container{
