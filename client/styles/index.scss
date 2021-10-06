@@ -23,7 +23,6 @@ h1{
     color: #008878;
     font-family: 'Bebas Neue', cursive;
     text-shadow: #FFCCBC 2px 2px;
-
 }
 
 input{
@@ -62,17 +61,17 @@ input{
 }
 .list-btn{
     margin: 8px;
-    border: 3px solid #77A6F7;
+    border: 3px solid #D3E3FC;
     border-radius: 3px;
     background-color: #77A6F7;
     color: #D3E3FC;
-    padding: 15px;
+    padding: 10px;
     font-size: 1.2rem;
 }
 
 .list-btn:hover{
-    border: 3px solid #D3E3FC;
-    border-radius: 3px;
+    transform: scale(0.95);
+    border-radius: 6px;
 }
 // Landing
 // Main 
@@ -123,14 +122,27 @@ input{
 
 }
 
+// List
+// Task
 .task-item-container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
-// List
 
+.task-btn{
+    margin: 8px;
+    border: 3px solid #D3E3FC;
+    border-radius: 3px;
+    background-color: #77A6F7;
+    color: #D3E3FC;
+    padding: 5px;
+    font-size: 1rem;
+}
 
+.wider{
+    padding: 0px 15px 0px 15px;
+}
 
 
 // Colour pallete 
