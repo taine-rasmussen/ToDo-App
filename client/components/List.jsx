@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 const List = () => {
 
-    const [todo, setTodo] = useState([['Smile']])
+    const [todo, setTodo] = useState([{task: 'smile'}])
 
 
     const updateToDoList = (e) => {
@@ -18,7 +18,7 @@ const List = () => {
             <div className="list-check-container"></div>
                 <div className="list-text-container">
                    {todo.map(item => {
-                       return <h2>{item}</h2>
+                       return <h2>{item.task}</h2>
                    })}
                 </div>
 
