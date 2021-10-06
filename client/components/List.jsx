@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 
 // For styling try split list form into its own component - will need to move state to parent Div
+// Add id to task to help handleDelete func
 
 const List = () => {
 
