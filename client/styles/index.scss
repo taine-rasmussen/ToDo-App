@@ -132,11 +132,31 @@ h2{
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    margin-bottom: -2.5rem;
 }
 
 .del-btn{
     padding: 0px 15px 0px 15px;
-    margin: -5px 0px 0px 5px;
+    margin: -5px 0px 0px 15px;
+    height: 27.5px;
+    border: 3px solid #FFCCBC;
+    border-radius: 3px;
+    background-color: #77A6F7;
+    color: #D3E3FC;
+    padding: 5px;
+    font-size: 0.7rem;
+}
+
+.del-btn:hover{
+    background-color: #FFCCBC;
+    border: 0px;
+    color: #00887A;
+    transform: scale(0.9)
+}
+
+.edit{
+    padding: 0px 15px 0px 15px;
+    margin: -5px 0px 0px 20px;
     height: 27.5px;
     border: 3px solid #D3E3FC;
     border-radius: 3px;
@@ -146,16 +166,12 @@ h2{
     font-size: 0.7rem;
 }
 
-.edit{
-    padding: 0px 15px 0px 15px;
-    margin: -5px 5px 0px 20px;
-    height: 27.5px;
-    border: 3px solid #D3E3FC;
-    border-radius: 3px;
-    background-color: #77A6F7;
-    color: #D3E3FC;
-    padding: 5px;
-    font-size: 0.7rem;
+.edit:hover{
+    background-color: #D3E3FC;
+    border: 0px;
+    color: #77A6F7;
+    transform: scale(1.1);
+    margin-right: 6px;
 }
 
 .checkbox{
