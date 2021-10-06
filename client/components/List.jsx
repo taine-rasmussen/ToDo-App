@@ -25,6 +25,7 @@ const List = () => {
         setInput('')
     }
 
+
     return(
         <div className="list-container">
             <form onSubmit={handleSubmit} className="form-container">
@@ -40,8 +41,13 @@ const List = () => {
                 <div className="list-check-container"></div>
                     <div className="list-text-container">
                     {task.map(item => {
-                        return <h2>{item}</h2>
-                    })}
+                        return <div>
+                                    <input type='checkbox'></input>
+                                    <h2>{item}</h2>
+                                    <button>Edit</button>
+                                    <button>Delete</button>
+                               </div>
+                           })}
                     </div>
         </div>
     )
