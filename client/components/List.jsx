@@ -27,23 +27,22 @@ const List = () => {
 
     return(
         <div className="list-container">
-            <div className="list-check-container"></div>
-                <div className="list-text-container">
-                   {task.map(item => {
-                       return <h2>{item}</h2>
-                   })}
-                </div>
-
-                    <form onSubmit={handleSubmit} className="form-container">
-                        <input 
-                            type='text'
-                            placeholder='Enter task...' 
-                            value={input} 
-                            onChange={handleChange}
-                            className='form-input'>
-                        </input>
-                        <button type='submit' className='list-btn'>Add to list</button>
-                   </form>
+            <form onSubmit={handleSubmit} className="form-container">
+                <input 
+                    type='text'
+                    placeholder='Enter task...' 
+                    value={input} 
+                    onChange={handleChange}
+                    className='form-input'>
+                </input>
+                <button type='submit' className='list-btn'>Add to list</button>
+            </form>
+                <div className="list-check-container"></div>
+                    <div className="list-text-container">
+                    {task.map(item => {
+                        return <h2>{item}</h2>
+                    })}
+                    </div>
         </div>
     )
 }
