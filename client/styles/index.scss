@@ -105,7 +105,14 @@ input{
 }
 
 .form-container{
-    margin-top: 33rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.form-input{
+    margin-right: -2rem;
 }
 
 .list-check-container{

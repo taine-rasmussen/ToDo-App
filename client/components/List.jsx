@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 
 const List = () => {
 
-    // State used to track from input
+    // State used to track form input
     const [input, setInput] = useState('')
 
     // State used to track task on todo list
@@ -37,9 +37,10 @@ const List = () => {
                     <form onSubmit={handleSubmit} className="form-container">
                         <input 
                             type='text'
-                            placeholder='Enter task' 
+                            placeholder='Enter task...' 
                             value={input} 
-                            onChange={handleChange}>
+                            onChange={handleChange}
+                            className='form-input'>
                         </input>
                         <button type='submit' className='list-btn'>Add to list</button>
                    </form>
