@@ -38,7 +38,7 @@ const List = () => {
                             value={input} 
                             onChange={handleChange}>
                         </input>
-                        <button type='submit'>Add to list</button>
+                        <button type='submit' className='list-btn'>Add to list</button>
                    </form>
         </div>
     )

@@ -60,7 +60,7 @@ input{
 .landing-input{
     margin: 2px;
 }
-.landing-btn{
+.list-btn{
     margin: 8px;
     border: 3px solid #77A6F7;
     border-radius: 3px;
@@ -70,8 +70,9 @@ input{
     font-size: 1.2rem;
 }
 
-.landing-btn:hover{
-    box-shadow: #FFCCBC 0px 2px 20px;
+.list-btn:hover{
+    border: 3px solid #D3E3FC;
+    border-radius: 3px;
 }
 // Landing
 // Main 
