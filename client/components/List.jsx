@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
 
+// For styling try split list form into its own component - will need to move state to parent Div
+
 const List = () => {
 
     // State used to track from input
@@ -31,7 +33,7 @@ const List = () => {
                    })}
                 </div>
 
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit} className="form-container">
                         <input 
                             type='text'
                             placeholder='Enter task' 
