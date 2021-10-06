@@ -122,6 +122,12 @@ input{
 .list-text-container{
 
 }
+
+.task-item-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 // List
 
 

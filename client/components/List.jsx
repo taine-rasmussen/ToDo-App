@@ -42,7 +42,7 @@ const List = () => {
                     <div className="list-text-container">
                     {task.map(item => {
                         return item.length < 1 ? null : 
-                                    <div>
+                                    <div className='task-item-container'>
                                         <input type='checkbox'></input>
                                         <h2>{item}</h2>
                                         <button>Edit</button>
