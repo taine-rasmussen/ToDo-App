@@ -29,7 +29,7 @@ const Main = () => {
 
     return (
         <div className='main-container'>
-            <div className='main-header-container'>{header ? secondHeader : firstHeader }</div>
+            <div className='main-header-container'>{firstHeader}</div>
                 <div className='main-list-container'>
                     <List />
                 </div>
