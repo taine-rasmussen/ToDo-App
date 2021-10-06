@@ -8,7 +8,8 @@ import Main from './Main'
   // User can add to list [x]
   // User can remove from list []
   // User can tick complete task []
-  // User can edit task
+  // User can edit task []
+  // User can clear all task []
 
 // Nice to haves
   // User can see percentage of task complete []
