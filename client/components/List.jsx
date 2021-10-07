@@ -43,6 +43,11 @@ const List = () => {
             }
         }
 
+
+        const handleClearTasks = () => {
+            setTask([[]])
+        }
+
     return(
         <div className="list-container">
             <form onSubmit={handleSubmit} className="form-container">
@@ -67,6 +72,8 @@ const List = () => {
                                     </div>
                               })}
                     </div>
+
+                    <button onClick={handleClearTasks}>Clear</button>
         </div>
     )
 }
