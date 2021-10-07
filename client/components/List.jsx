@@ -43,7 +43,7 @@ const List = () => {
             }
         }
 
-
+        // Resets Task state and clears list on Click
         const handleClearTasks = () => {
             setTask([[]])
         }
@@ -59,6 +59,7 @@ const List = () => {
                     className='form-input'>
                 </input>
                 <button type='submit' className='list-btn'>Add to list</button>
+                <button className='list-btn pink-border' onClick={handleClearTasks}>Clear tasks</button>
             </form>
                 <div className="task-container"></div>
                     <div className="list-text-container">
@@ -72,8 +73,6 @@ const List = () => {
                                     </div>
                               })}
                     </div>
-
-                    <button onClick={handleClearTasks}>Clear</button>
         </div>
     )
 }
