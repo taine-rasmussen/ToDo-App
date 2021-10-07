@@ -46,6 +46,12 @@ const List = () => {
         // Resets Task state and clears list on Click
         const handleClearTasks = () => {
             setTask([[]])
+            setPlaceHolderChange(true)
+        }
+
+        // Removes individual task from list
+        const handleDelete = () => {
+            
         }
 
     return(
@@ -69,7 +75,7 @@ const List = () => {
                                         <input type='checkbox' className='checkbox'></input>
                                         <h2>{item}</h2>
                                         <button className='edit'>Edit</button>
-                                        <button className='del-btn'>Delete</button>
+                                        <button className='del-btn' onClick={handleDelete}>Delete</button>
                                     </div>
                               })}
                     </div>
