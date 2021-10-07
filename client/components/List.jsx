@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { HiBan, HiOutlineCode } from "react-icons/hi";
+
 
 
 // For styling try split list form into its own component - will need to move state to parent Div
@@ -58,6 +60,7 @@ const List = () => {
 
         }
 
+
     return(
         <div className="list-container">
             <form onSubmit={handleSubmit} className="form-container">
@@ -81,8 +84,8 @@ const List = () => {
                                             <h2>{item.value}</h2>
                                         </div>
                                             <div className='btn-container'>
-                                                <button className='edit'>Edit</button>
-                                                <button key={item.id} className='del-btn' onClick={handleDelete}>Delete</button>
+                                                <button className='edit'><HiOutlineCode /></button>
+                                                <button key={item.id} className='del-btn' onClick={handleDelete}><HiBan /></button>
                                             </div>
                                     </div>
                               })}
