@@ -34,7 +34,7 @@ const List = () => {
         // Pushes form input into task state to be displayed as item on todo list
         const handleSubmit = (e) => {
             e.preventDefault()
-            task.push({id: task.length + 1, value: input})
+            task.push({id: task.length, value: input})
             setInput('')
             // Changes placeholder text after first input added to list
             if (input.length > 1) {
@@ -46,13 +46,16 @@ const List = () => {
 
         // Resets Task state and clears list onClick & resets placeholder message
         const handleClearTasks = () => {
-            setTask([[]])
+            setTask([])
             setPlaceHolderChange(true)
         }
 
+
+
         // Removes individual task from list
         const handleDelete = () => {
-           
+          
+
         }
 
     return(
@@ -74,9 +77,13 @@ const List = () => {
                         return item.length < 1 ? null : 
                                     <div className='task-item-container' key={item.id}>
                                         <input type='checkbox' className='checkbox'></input>
-                                        <h2>{item.value}</h2>
-                                        <button className='edit'>Edit</button>
-                                        <button className='del-btn' onClick={handleDelete}>Delete</button>
+                                        <div className='task-header-container'>
+                                            <h2>{item.value}</h2>
+                                        </div>
+                                            <div className='btn-container'>
+                                                <button className='edit'>Edit</button>
+                                                <button key={item.id} className='del-btn' onClick={handleDelete}>Delete</button>
+                                            </div>
                                     </div>
                               })}
                     </div>
