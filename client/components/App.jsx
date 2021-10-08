@@ -6,7 +6,7 @@ import Main from './Main'
 
 // MVP
   // User can add to list [x]
-  // User can remove task from list []
+  // User can remove task from list [x]
   // User can tick complete task [x]
   // User can edit task []
   // User can clear all task [x]
