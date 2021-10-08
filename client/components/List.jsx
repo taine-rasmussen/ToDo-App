@@ -55,11 +55,12 @@ const List = () => {
 
 
         // Removes individual task from list
-        const handleDelete = () => {
-          
-
+        const handleDelete = (id) => {
+            const newList = task.filter((item) => item.id !== id);
+            setTask(newList);
         }
 
+            // Can you place a key on the btn and map that value against task id to delete?
 
     return(
         <div className="list-container">
@@ -85,7 +86,7 @@ const List = () => {
                                         </div>
                                             <div className='btn-container'>
                                                 <button className='edit'><HiOutlineCode /></button>
-                                                <button key={item.id} className='del-btn' onClick={handleDelete}><HiBan /></button>
+                                                <button className='del-btn' onClick={() => handleDelete(item.id)}><HiBan /></button>
                                             </div>
                                     </div>
                               })}
