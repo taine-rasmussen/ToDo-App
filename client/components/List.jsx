@@ -52,13 +52,17 @@ const List = () => {
             setPlaceHolderChange(true)
         }
 
-
-
         // Removes individual task from list
         const handleDelete = (id) => {
-            const newList = task.filter((item) => item.id !== id);
-            setTask(newList);
+            const newList = task.filter((item) => item.id !== id)
+            setTask(newList)
         }
+
+
+        const handleEdit = (e, id) => {
+          
+            }
+        
 
             // Can you place a key on the btn and map that value against task id to delete?
 
@@ -82,12 +86,17 @@ const List = () => {
                                     <div className='task-item-container' key={item.id}>
                                         <input type='checkbox' className='checkbox'></input>
                                         <div className='task-header-container'>
-                                            <h2>{item.value}</h2>
+                                            <input
+                                                value={item.value} 
+                                                key={item.id} 
+                                                type='text' 
+                                                onChange={handleEdit}>
+                                            </input> 
                                         </div>
-                                            <div className='btn-container'>
-                                                <button className='edit'><HiOutlineCode /></button>
-                                                <button className='del-btn' onClick={() => handleDelete(item.id)}><HiBan /></button>
-                                            </div>
+                                        <div className='btn-container'>
+                                            {/* <button className='edit' onClick={handleEdit}><HiOutlineCode /></button> */}
+                                            <button className='del-btn' onClick={() => handleDelete(item.id)}><HiBan /></button>
+                                        </div>
                                     </div>
                               })}
                     </div>
