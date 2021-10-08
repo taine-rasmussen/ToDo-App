@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { HiBan, HiOutlineCode } from "react-icons/hi";
+
 
 
 // For styling try split list form into its own component - will need to move state to parent Div
@@ -53,10 +55,12 @@ const List = () => {
 
 
         // Removes individual task from list
-        const handleDelete = () => {
-          
-
+        const handleDelete = (id) => {
+            const newList = task.filter((item) => item.id !== id);
+            setTask(newList);
         }
+
+            // Can you place a key on the btn and map that value against task id to delete?
 
     return(
         <div className="list-container">
@@ -81,8 +85,8 @@ const List = () => {
                                             <h2>{item.value}</h2>
                                         </div>
                                             <div className='btn-container'>
-                                                <button className='edit'>Edit</button>
-                                                <button key={item.id} className='del-btn' onClick={handleDelete}>Delete</button>
+                                                <button className='edit'><HiOutlineCode /></button>
+                                                <button className='del-btn' onClick={() => handleDelete(item.id)}><HiBan /></button>
                                             </div>
                                     </div>
                               })}
