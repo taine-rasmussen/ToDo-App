@@ -35,7 +35,7 @@ const List = () => {
         // Pushes form input into task state to be displayed as item on todo list
         const handleSubmit = (e) => {
             e.preventDefault()
-            task.push({id: task.length, value: input})
+            task.push({id: task.length, value: input, done: false})
             setInput('')
             // Changes placeholder text after first input added to list
             if (input.length > 1) {
@@ -43,6 +43,17 @@ const List = () => {
             } else {
                 null
             }
+        }
+
+        // Updates tasks done value with true
+        const handleCompletedTask = (id) => {
+            const updatedTodos = [...task].map((item) => {
+                if (item.id === id) {
+                  item.done = true
+                } 
+                    return item
+            })
+                setTask(updatedTodos)
         }
 
         // Resets Task state and clears list onClick & resets placeholder message
@@ -74,7 +85,7 @@ const List = () => {
         <> 
 
         {task.length < 1 ? null : <h3>Total tasks: {task.length}</h3>}
-        
+
         <div className="list-container">
             <form onSubmit={handleSubmit} className="form-container">
                 <input 
@@ -91,7 +102,11 @@ const List = () => {
                     {task.map(item => {
                         return item.length < 1 ? null : 
                                     <div className='task-item-container' key={item.id}>
-                                        <input type='checkbox' className='checkbox'></input>
+                                        <input 
+                                            type='checkbox' 
+                                            className='checkbox'
+                                            onClick={(e) => handleCompletedTask(item.id)}>
+                                        </input>
                                             <div className='task-header-container'>
                                                 {editing === item.id ? 
                                                     (<input 
