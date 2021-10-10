@@ -65,10 +65,11 @@ const List = () => {
 
 
         const handleEdit = (id) => {
-            const updatedTodos = [... task].map(item => {
+            const updatedTodos = [...task].map((item) => {
                 if (item.id === id) {
-                    task.value = editText
-                } return task
+                  item.value = editText
+                } 
+                return item
             })
                 setTask(updatedTodos)
                 setEditText('')
