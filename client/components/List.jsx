@@ -17,6 +17,8 @@ const List = () => {
     // State used to change h2 to input when user edits
     const [editing, setEditing] = useState(false)
 
+    const [editItem, setEditItem] = useState('')
+
     // State used to flip placeholder text after first item added
     const [placeHolderChange, setPlaceHolderChange] = useState(true)
         
@@ -67,13 +69,23 @@ const List = () => {
 
 
 
+            setEditItem(editedItem.value)
 
-
+            setEditing(true)
 
 
             console.log(editedItem)
           
         }
+
+        const handleEditChange = (e) => {
+            e.preventDefault()
+
+        }
+
+
+
+        const editingtask = <input type="text" value={editItem} onChange={handleEditChange}></input>
         
 
             // Can you place a key on the btn and map that value against task id to delete?
@@ -98,7 +110,7 @@ const List = () => {
                                     <div className='task-item-container' key={item.id}>
                                         <input type='checkbox' className='checkbox'></input>
                                         <div className='task-header-container'>
-                                            <h2>{item.value}</h2> 
+                                          {editing ? editingtask : <h2>{item.value}</h2>}  
                                         </div>
                                         <div className='btn-container'>
                                             <button className='edit' onClick={() => handleEdit(item.id)}><HiOutlineCode /></button>
