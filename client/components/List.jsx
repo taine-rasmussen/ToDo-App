@@ -91,8 +91,8 @@ const List = () => {
                 <button type='submit' className='list-btn'>Add to list</button>
                 <button className='list-btn pink-border' onClick={handleClearTasks}>Clear tasks</button>
             </form>
-                <div className="task-container"></div>
-                    <div className="list-text-container">
+                <div className="task-container">
+
                     {task.map(item => {
                         return item.length < 1 ? null : 
                                     <div className='task-item-container' key={item.id}>
@@ -115,7 +115,9 @@ const List = () => {
                                         </div>
                                     </div>
                               })}
-                    </div>
+                 
+
+                </div>
         </div>
     )
 }

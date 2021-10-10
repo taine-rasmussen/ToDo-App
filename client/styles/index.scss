@@ -49,10 +49,6 @@ h2{
     margin-left: 3rem;
 }
 // Header
-
-
-
-
 // list - Form
 .form-container{
     display: flex;
@@ -60,9 +56,23 @@ h2{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
 }
 // list - Form
+// List - Tasks
+.task-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-item-container{
+    display: flex;
+    flex-direction: row;
+}
+// List - Tasks
+
 
 
 
