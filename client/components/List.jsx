@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
 import { HiBan, HiOutlineCode, HiCheck  } from "react-icons/hi";
 
-
-
-// For styling try split list form into its own component - will need to move state to parent Div
-// Add id to task to help handleDelete func
-
 const List = () => {
 
     // State used to track form input
@@ -14,12 +9,9 @@ const List = () => {
     // State used to track task on todo list
     const [task, setTask] = useState([])
 
-    
     const [editing, setEditing] = useState(null)
 
     const [editText, setEditText] = useState('')
-
-    const [btnFlip, setBtnFlip] = useState(false)
 
     // State used to flip placeholder text after first item added
     const [placeHolderChange, setPlaceHolderChange] = useState(true)
@@ -71,7 +63,7 @@ const List = () => {
                 if (item.id === id) {
                   item.value = editText
                 } 
-                return item
+                    return item
             })
                 setTask(updatedTodos)
                 setEditText('')
@@ -79,6 +71,10 @@ const List = () => {
         }
 
     return(
+        <> 
+
+        {task.length < 1 ? null : <h3>Total tasks: {task.length}</h3>}
+        
         <div className="list-container">
             <form onSubmit={handleSubmit} className="form-container">
                 <input 
@@ -92,7 +88,6 @@ const List = () => {
                 <button className='list-btn pink-border' onClick={handleClearTasks}>Clear tasks</button>
             </form>
                 <div className="task-container">
-
                     {task.map(item => {
                         return item.length < 1 ? null : 
                                     <div className='task-item-container' key={item.id}>
@@ -115,10 +110,9 @@ const List = () => {
                                         </div>
                                     </div>
                               })}
-                 
-
                 </div>
         </div>
+        </>
     )
 }
 
