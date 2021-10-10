@@ -44,12 +44,24 @@ h2{
    }
 
 
+
+
 // Header
 .main-header-container{
     margin-left: 3rem;
+    margin-top: -1rem;
 }
 // Header
 // list - Form
+.list-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: -2.5rem;
+}
+
 .form-container{
     display: flex;
     flex-direction: row;
@@ -63,13 +75,35 @@ h2{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    background-color: #77A6F7;
+    border-top: 1px solid #77A6F7;
+    border-radius: 20px;
+    width: 600px;
+    height: 600px;
 }
 
 .task-item-container{
     display: flex;
     flex-direction: row;
+    background-color: #008878;
+    border-bottom: 1px solid #008878;
+    border-radius: 10px;
+}
+
+.checkbox{
+    margin: 25px;
+}
+
+.task-header-container{
+    margin: 25px;
+}
+
+.btn-container{
+    margin: 25px;
+}
+
+.edit-btns-container{
+
 }
 // List - Tasks
 
