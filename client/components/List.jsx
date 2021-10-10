@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { HiBan, HiOutlineCode  } from "react-icons/hi";
+import { HiBan, HiOutlineCode, HiCheck  } from "react-icons/hi";
 
 
 
@@ -109,7 +109,7 @@ const List = () => {
                                         <div className='btn-container'>
                                             <div className='edit-btns-container'>
                                                 <button className='edit' onClick={() => setEditing(item.id)}><HiOutlineCode /></button>
-                                                <button onClick={() => handleEdit(item.id)}>Update</button>
+                                                <button onClick={() => handleEdit(item.id)}><HiCheck /></button>
                                             </div>
                                             <button className='del-btn' onClick={() => handleDelete(item.id)}><HiBan /></button>
                                         </div>

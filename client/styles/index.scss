@@ -50,6 +50,7 @@ h2{
 .main-header-container{
     margin-left: 3rem;
     margin-top: -1rem;
+    margin-bottom: -2.5rem;
 }
 // Header
 // list - Form
@@ -59,7 +60,6 @@ h2{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-top: -2.5rem;
 }
 
 .form-container{
@@ -85,25 +85,29 @@ h2{
 .task-item-container{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     background-color: #008878;
     border-bottom: 1px solid #008878;
     border-radius: 10px;
+    height: 10%;
+    align-items: center;
 }
 
 .checkbox{
-    margin: 25px;
+
 }
 
 .task-header-container{
-    margin: 25px;
+
 }
 
 .btn-container{
-    margin: 25px;
+    display: flex;
+    flex-direction: row;
 }
 
 .edit-btns-container{
-
+    
 }
 // List - Tasks
 
