@@ -14,10 +14,12 @@ const List = () => {
     // State used to track task on todo list
     const [task, setTask] = useState([])
 
-
+    
     const [editing, setEditing] = useState(null)
 
     const [editText, setEditText] = useState('')
+
+    const [btnFlip, setBtnFlip] = useState(false)
 
     // State used to flip placeholder text after first item added
     const [placeHolderChange, setPlaceHolderChange] = useState(true)
@@ -63,12 +65,13 @@ const List = () => {
             setTask(newList)
         }
 
-
+        // Captures edit input and updates task state with new input
         const handleEdit = (id) => {
-            const updatedTodos = [... task].map(item => {
+            const updatedTodos = [...task].map((item) => {
                 if (item.id === id) {
-                    task.value = editText
-                } return task
+                  item.value = editText
+                } 
+                return item
             })
                 setTask(updatedTodos)
                 setEditText('')
@@ -88,30 +91,33 @@ const List = () => {
                 <button type='submit' className='list-btn'>Add to list</button>
                 <button className='list-btn pink-border' onClick={handleClearTasks}>Clear tasks</button>
             </form>
-                <div className="task-container"></div>
-                    <div className="list-text-container">
+                <div className="task-container">
+
                     {task.map(item => {
                         return item.length < 1 ? null : 
                                     <div className='task-item-container' key={item.id}>
                                         <input type='checkbox' className='checkbox'></input>
-                                        <div className='task-header-container'>
-
-
-                                          {editing === item.id ? (<input 
-                                                                    type="text" 
-                                                                    onChange={(e) => setEditText(e.target.value) } 
-                                                                    value={editText}>
-                                                                 </input>) : (<h2>{item.value}</h2>)}  
-
-                                        </div>
+                                            <div className='task-header-container'>
+                                                {editing === item.id ? 
+                                                    (<input 
+                                                        type="text" 
+                                                        onChange={(e) => setEditText(e.target.value) } 
+                                                        value={editText}>
+                                                    </input>) 
+                                                : (<h2>{item.value}</h2>)}  
+                                            </div>
                                         <div className='btn-container'>
-                                            <button className='edit' onClick={() => setEditing(item.id)}><HiOutlineCode /></button>
-                                            <button onClick={() => handleEdit(item.id)}>Submit Edit</button>
+                                            <div className='edit-btns-container'>
+                                                <button className='edit' onClick={() => setEditing(item.id)}><HiOutlineCode /></button>
+                                                <button onClick={() => handleEdit(item.id)}>Update</button>
+                                            </div>
                                             <button className='del-btn' onClick={() => handleDelete(item.id)}><HiBan /></button>
                                         </div>
                                     </div>
                               })}
-                    </div>
+                 
+
+                </div>
         </div>
     )
 }
