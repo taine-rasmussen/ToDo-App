@@ -14,6 +14,9 @@ const List = () => {
     // State used to track task on todo list
     const [task, setTask] = useState([])
 
+    // State used to change h2 to input when user edits
+    const [editing, setEditing] = useState(false)
+
     // State used to flip placeholder text after first item added
     const [placeHolderChange, setPlaceHolderChange] = useState(true)
         
@@ -61,6 +64,12 @@ const List = () => {
 
         const handleEdit = (id) => {
             const editedItem = task.find((item) => item.id == id)
+
+
+
+
+
+
 
             console.log(editedItem)
           
